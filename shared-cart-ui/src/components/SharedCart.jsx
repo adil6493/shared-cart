@@ -76,6 +76,7 @@ const SharedCart = (props) => {
     }
 
     const fetchUserData = (newUser) => {
+        localStorage.setItem('userId', newUser);
         axios
             .get("http://localhost:8080/sharedCart/user/" + newUser)
             .then((res) => {
